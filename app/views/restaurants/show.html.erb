@@ -3,7 +3,9 @@
 <h4> <%= @restaurant.address %></h4>
 <p><%= @restaurant.phone_number %></p>
 
-
-
-
+<% @restaurant.reviews.each do |review| %>
+  <li><%= review.content %> - <%= review.rating %></li>
+<% end %>
+<br>
+<br>
 <%= link_to 'Go Back', restaurants_path, class: 'btn btn-primary' %>
