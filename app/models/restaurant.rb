@@ -7,4 +7,3 @@ class Restaurant < ApplicationRecord
 end
 
 
-
