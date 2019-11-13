@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.header {
+  display: flex;
+
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.add-btn {
+  margin-left: 4rem;
+}

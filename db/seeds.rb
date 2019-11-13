@@ -3,5 +3,16 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }]
 #   Character.create(name: 'Luke', movie: movies.first)
+Restaurant.destroy_all
+
+CATEGORIES = ["chinese", "italian", "japanese", "french", "belgian"]
+
+10.times do
+  Restaurant.create(name: Faker::Restaurant.name,
+                    address: Faker::Address.full_address,
+                    phone_number: Faker::PhoneNumber.cell_phone,
+                    category: CATEGORIES.sample
+                   )
+end
